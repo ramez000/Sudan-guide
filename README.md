@@ -1,64 +1,99 @@
-# Sudan Guide | دليل السودان
+# 🇸🇩 Sudan Guide
 
-Sudan Guide هو مشروع Full Stack تجريبي يبدأ من أم درمان، ويهدف إلى عرض الخدمات والأماكن وحالتها الحالية مع تحديثات المجتمع.
 
-## النسخة الأولى
+## 📖 About The Project
 
-- نطاق البيانات الأولي: أم درمان
-- الحسابات وتسجيل الدخول
-- إضافة الأنشطة والأماكن
-- تحديث حالة النشاط
-- بلاغات المستخدمين عن الكهرباء والمياه والشبكات وغيرها
-- تأكيد/رفض البلاغات
-- حساب ثقة مبسط للمستخدمين
-- بحث وتصنيف
-- خريطة تفاعلية
-- لوحة نشاط لصاحب النشاط
-- واجهة عربية RTL
+Sudan Guide is a comprehensive web platform designed to be the ultimate digital directory for services, businesses, and residential locations across Sudan.
 
-## المتطلبات
+The platform aims to help citizens, residents, and visitors easily discover and access essential information about businesses, public services, healthcare facilities, educational institutions, residential properties, and various local services available throughout the country.
 
-Node.js 18 أو أحدث.
+By bringing all local information into a centralized and searchable platform, Sudan Guide contributes to Sudan's digital transformation while supporting local businesses and improving accessibility for users.
 
-## التشغيل
+---
 
-```bash
-npm install
-npm start
-```
+## 🎯 Vision
 
-ثم افتح:
+To become Sudan's leading digital directory and location discovery platform, connecting people with businesses, services, and housing opportunities across the country.
 
-http://localhost:3000
+---
 
-للتطوير:
+## 🚀 Mission
 
-```bash
-npm run dev
-```
+To provide a reliable, user-friendly, and comprehensive online guide that helps users quickly find the information, services, and places they need anywhere in Sudan.
 
-## حساب الإدارة التجريبي
+---
 
-البريد:
-admin@sudanguide.local
+## ✨ Features
 
-كلمة المرور:
-ChangeMe123!
+### 🔍 Smart Search
+- Fast and accurate search functionality.
+- Search by name, category, city, or location.
+- Advanced filtering options.
 
-غيّر كلمة المرور لاحقًا ولا تستخدمها في الإنتاج.
+### 🏪 Business Directory
+- Commercial stores.
+- Supermarkets.
+- Shopping centers.
+- Local businesses.
 
-## ملاحظات مهمة
+### 🏥 Healthcare Services
+- Hospitals.
+- Clinics.
+- Pharmacies.
+- Medical laboratories.
 
-هذه النسخة تستخدم ملف JSON كقاعدة بيانات MVP حتى تعمل بسهولة على جهاز شخصي ولا تعتمد على مكتبات Native قد تسبب مشاكل في Windows/Android/Termux.
+### 🎓 Educational Services
+- Schools.
+- Universities.
+- Institutes.
+- Training centers.
 
-عند الانتقال للإنتاج، يُنصح بنقل طبقة التخزين إلى PostgreSQL مع PostGIS، وإضافة تخزين صور، SMS/OTP، Redis، ونظام إشراف متقدم.
+### 🏠 Housing & Accommodation
+- Apartments for rent.
+- Hotels.
+- Guest houses.
+- Residential compounds.
 
-## هيكل المشروع
+### 🚕 Transportation Services
+- Transportation companies.
+- Taxi services.
+- Travel agencies.
 
-- `backend/src/server.js` الخادم وواجهات API
-- `backend/src/db.js` طبقة البيانات
-- `backend/src/auth.js` المصادقة
-- `frontend/index.html` الواجهة
-- `frontend/app.js` منطق الواجهة
-- `frontend/styles.css` التصميم
-- `data/seed.json` البيانات الأولية
+### 🏦 Financial Services
+- Banks.
+- ATM locations.
+- Financial institutions.
+
+### ⭐ Reviews & Ratings
+- User reviews.
+- Business ratings.
+- Service feedback system.
+
+### 📍 Location-Based Services
+- Interactive maps.
+- Nearby services discovery.
+- GPS integration.
+
+### 🌐 Multilingual Support
+- Arabic Language.
+- English Language.
+
+### 📱 Responsive Design
+- Mobile devices.
+- Tablets.
+- Desktop computers.
+
+### 🛠 Admin Dashboard
+- Manage businesses.
+- Manage categories.
+- User management.
+- Analytics and reports.
+
+---
+
+# Made With Love In SUDAN 🇸🇩💖
+
+---
+
+## 📞 Contact Us
+[WhatsApp](https://wa.me/249962416396)
