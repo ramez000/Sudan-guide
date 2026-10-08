@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sudan Guide - دليل السودان للخدمات والمعلومات المحلية الحية">
+  <title>Sudan Guide | دليل السودان</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">SG</div>
+      <div>
+        <strong>Sudan Guide</strong>
+        <span>دليل السودان</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="loginBtn" class="btn btn-light">تسجيل الدخول</button>
+      <button id="registerBtn" class="btn btn-primary">إنشاء حساب</button>
+      <button id="logoutBtn" class="btn btn-light hidden">تسجيل الخروج</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">أم درمان • النسخة الأولى</span>
+        <h1>اعرف ماذا يعمل حولك الآن.</h1>
+        <p>دليل حي للخدمات والأماكن والبلاغات المحلية، يحدّثه أصحاب الأنشطة والمواطنون.</p>
+
+        <div class="location-bar">
+          <span>📍</span>
+          <select id="areaSelect"></select>
+          <button id="nearMeBtn" class="btn btn-light">استخدم موقعي</button>
+        </div>
+
+        <div class="searchbar">
+          <input id="searchInput" type="search" placeholder="ابحث عن صيدلية، بقالة، مستشفى، كهربائي..." autocomplete="off">
+          <button id="searchBtn" class="btn btn-primary">بحث</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div id="notice" class="notice hidden"></div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">الحالة الآن</span>
+          <h2>الخدمات الأساسية</h2>
+        </div>
+        <button id="reportBtn" class="btn btn-primary">+ أبلغ عن حالة</button>
+      </div>
+      <div id="statusGrid" class="status-grid"></div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">حولك</span>
+          <h2>الأماكن والخدمات</h2>
+        </div>
+        <button id="addPlaceBtn" class="btn btn-light">+ أضف نشاطًا</button>
+      </div>
+      <div id="categoryFilters" class="chips"></div>
+      <div id="placesGrid" class="cards"></div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">المجتمع</span>
+          <h2>آخر البلاغات</h2>
+        </div>
+      </div>
+      <div id="reportsList" class="reports"></div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">الخريطة</span>
+          <h2>ما حولك</h2>
+        </div>
+      </div>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Sudan Guide</strong>
+      <span>دليل السودان</span>
+    </div>
+    <p>منصة مجتمعية قيد التطوير — المعلومات المنشورة تحتاج إلى تحقق المستخدم.</p>
+  </footer>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

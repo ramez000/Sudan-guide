@@ -1,0 +1,172 @@
+{
+  "users": [],
+  "categories": [
+    {
+      "id": "electricity",
+      "name": "الكهرباء",
+      "icon": "⚡",
+      "kind": "status"
+    },
+    {
+      "id": "water",
+      "name": "المياه",
+      "icon": "💧",
+      "kind": "status"
+    },
+    {
+      "id": "network",
+      "name": "الشبكات والإنترنت",
+      "icon": "📡",
+      "kind": "status"
+    },
+    {
+      "id": "banking",
+      "name": "البنوك والخدمات المالية",
+      "icon": "🏧",
+      "kind": "status"
+    },
+    {
+      "id": "health",
+      "name": "الصحة والمستشفيات",
+      "icon": "🏥",
+      "kind": "place"
+    },
+    {
+      "id": "pharmacy",
+      "name": "الصيدليات",
+      "icon": "💊",
+      "kind": "place"
+    },
+    {
+      "id": "shopping",
+      "name": "الأسواق والمحلات",
+      "icon": "🛒",
+      "kind": "place"
+    },
+    {
+      "id": "fuel",
+      "name": "الوقود",
+      "icon": "⛽",
+      "kind": "place"
+    },
+    {
+      "id": "transport",
+      "name": "المواصلات",
+      "icon": "🚕",
+      "kind": "place"
+    },
+    {
+      "id": "delivery",
+      "name": "التوصيل والشحن",
+      "icon": "📦",
+      "kind": "place"
+    },
+    {
+      "id": "housing",
+      "name": "السكن والعقارات",
+      "icon": "🏠",
+      "kind": "place"
+    },
+    {
+      "id": "local-services",
+      "name": "الفنيون والخدمات المحلية",
+      "icon": "🛠️",
+      "kind": "place"
+    },
+    {
+      "id": "education",
+      "name": "التعليم",
+      "icon": "🎓",
+      "kind": "place"
+    },
+    {
+      "id": "government",
+      "name": "الخدمات الحكومية",
+      "icon": "🏛️",
+      "kind": "place"
+    },
+    {
+      "id": "food",
+      "name": "المطاعم والمخابز",
+      "icon": "🍽️",
+      "kind": "place"
+    },
+    {
+      "id": "other",
+      "name": "خدمات أخرى",
+      "icon": "📍",
+      "kind": "place"
+    }
+  ],
+  "areas": [
+    {
+      "id": "omdurman",
+      "name": "أم درمان",
+      "type": "city"
+    },
+    {
+      "id": "al-thawra",
+      "name": "حي الثورة",
+      "type": "neighborhood",
+      "parentId": "omdurman"
+    },
+    {
+      "id": "al-mohandiseen",
+      "name": "المهندسين",
+      "type": "neighborhood",
+      "parentId": "omdurman"
+    },
+    {
+      "id": "al-murabbaat",
+      "name": "المربعات",
+      "type": "neighborhood",
+      "parentId": "omdurman"
+    },
+    {
+      "id": "al-muhajireen",
+      "name": "المهاجرين",
+      "type": "neighborhood",
+      "parentId": "omdurman"
+    }
+  ],
+  "places": [
+    {
+      "id": "p_demo_pharmacy",
+      "name": "صيدلية تجريبية - الثورة",
+      "categoryId": "pharmacy",
+      "areaId": "al-thawra",
+      "description": "بيانات تجريبية لعرض شكل المنصة. يجب التحقق من المعلومات قبل الاعتماد عليها.",
+      "phone": "",
+      "whatsapp": "",
+      "lat": 15.6505,
+      "lng": 32.4789,
+      "status": "open",
+      "verified": false,
+      "ownerId": null,
+      "createdAt": "2026-10-08T00:00:00.000Z",
+      "updatedAt": "2026-10-08T00:00:00.000Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "r_demo_power",
+      "userId": "u_admin",
+      "categoryId": "electricity",
+      "areaId": "al-thawra",
+      "status": "off",
+      "note": "بلاغ تجريبي فقط — لا يمثل حالة حقيقية.",
+      "lat": 15.6505,
+      "lng": 32.4789,
+      "confirmations": 0,
+      "denials": 0,
+      "createdAt": "2026-10-08T00:00:00.000Z",
+      "updatedAt": "2026-10-08T00:00:00.000Z"
+    }
+  ],
+  "reportVotes": [],
+  "messages": [],
+  "settings": {
+    "version": "1.0.0",
+    "initialCity": "أم درمان"
+  }
+}
