@@ -96,4 +96,11 @@ To provide a reliable, user-friendly, and comprehensive online guide that helps 
 ---
 
 ## 📞 Contact Us
-[WhatsApp](https://wa.me/249962416396)
+<p align="center">
+ <a
+href="https://wa.me/249115962269">
+  <img
+  src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp"
+  width="50">
+ </a>
+</p>
