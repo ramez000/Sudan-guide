@@ -10,26 +10,39 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-mark">SG</div>
-      <div>
-        <strong>Sudan Guide</strong>
-        <span>دليل السودان</span>
-      </div>
+    
+  
+<header class="topbar">
+  <div class="top-actions">
+    <button id="loginBtn" class="btn btn-light">تسجيل الدخول</button>
+    <button id="registerBtn" class="btn btn-primary">إنشاء حساب</button>
+    <button id="logoutBtn" class="btn btn-light hidden">تسجيل الخروج</button>
+  </div>
+
+  <div class="brand">
+    <div class="brand-en">
+      <strong>Sudan Guide</strong>
     </div>
-    <div class="top-actions">
-      <button id="loginBtn" class="btn btn-light">تسجيل الدخول</button>
-      <button id="registerBtn" class="btn btn-primary">إنشاء حساب</button>
-      <button id="logoutBtn" class="btn btn-light hidden">تسجيل الخروج</button>
+
+    <div class="brand-mark">SG</div>
+
+    <div class="brand-ar">
+      <span>دليل السودان</span>
     </div>
-  </header>
+  </div>
+
+  <div class="topbar-profile">
+    <button id="profileBtn" class="btn btn-light hidden">حسابي</button>
+  </div>
+</header>
+
 
   <main>
     <section class="hero">
       <div class="hero-content">
+        <h1>🗺 Sudan Guide</h1>
         <span class="eyebrow">أم درمان • النسخة الأولى</span>
-        <h1>اعرف ماذا يعمل حولك الآن.</h1>
+        <h2>اعرف عن ماذا يعمل حولك الآن.</h2>
         <p>دليل حي للخدمات والأماكن والبلاغات المحلية، يحدّثه أصحاب الأنشطة والمواطنون.</p>
 
         <div class="location-bar">
@@ -86,12 +99,77 @@
   </main>
 
   <footer>
-    <div>
-      <strong>Sudan Guide</strong>
-      <span>دليل السودان</span>
+    <div class="content-heading">
+      <span class="contact-eyebrow"></span>
+      <h1>تواصل معنا</h1>
+      <p>هل لديك استفسار أو اقتراح؟ يسعدنا التواصل معك.</p>
     </div>
+    
+    <div class="contact-links">
+      <a
+      class="contact-link"
+      href="sudanguide0@email.com"
+      aria-label="راسلنا عبر البريد الإلكتروني"
+      >
+      
+<span class="contact-icon email-icon">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#4285F4" d="M3 6.5 5.2 8.2V18H4a1 1 0 0 1-1-1V6.5Z"/>
+    <path fill="#34A853" d="M18.8 8.2 21 6.5V17a1 1 0 0 1-1 1h-1.2V8.2Z"/>
+    <path fill="#EA4335" d="M3 6.5 5.2 8.2 12 13.3l6.8-5.1L21 6.5V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v1.5Z"/>
+    <path fill="#FBBC04" d="M5.2 8.2 3 6.5V17a1 1 0 0 0 1 1h1.2V8.2Z"/>
+  </svg>
+</span>
+
+      <span class="contact-label">البريد الإلكتروني</span>
+    </a>
+    
+    <a
+    class="contact-link"
+    href="tel:+249115962269"
+    aria-label="اتصل بنا هاتفيًا"
+    >
+    
+<span class="contact-icon phone-icon">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#34A853" d="M6.6 3h3.1l1.5 5-2.1 1.8a15 15 0 0 0 5.1 5.1l1.8-2.1 5 1.5v3.1a2 2 0 0 1-2 2A16 16 0 0 1 4.6 5a2 2 0 0 1 2-2Z"/>
+  </svg>
+</span>
+
+      <span class="contact-label">الهاتف</span>
+    </a>
+    
+    <a
+      class="contact-link"
+      href="https://wa.me/249115962269"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="تواصل معنا عبر واتساب"
+      >
+      
+<span class="contact-icon whatsapp-icon">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#25D366" d="M12 2a9.7 9.7 0 0 0-8.3 14.7L2.5 22l5.5-1.2A10 10 0 1 0 12 2Z"/>
+    <path fill="#FFFFFF" d="M16.8 14.1c-.3-.2-1.7-.9-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7 0a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.2-.7l.5-.6.2-.5-.1-.5-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.3 1 2.7 1.1 2.9a11 11 0 0 0 4.3 4.2c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3s.2-1.1.2-1.2-.2-.2-.5-.4Z"/>
+  </svg>
+</span>
+
+      <span class="contact-label">واتساب</span>
+    </a>
+  </div>
+  
+  <div>
+    <h2><strong>Sudan Guide</strong></h2>
+    <h3>دليل السودان</h3>
     <p>منصة مجتمعية قيد التطوير — المعلومات المنشورة تحتاج إلى تحقق المستخدم.</p>
-  </footer>
+  </div>
+
+  <div class="contact-bottom">
+    <span>Sudan Guide</span>
+    <span>© جميع الحقوق محفوظة</span>
+  </div>
+
+</footer>
 
   <div id="modal" class="modal hidden">
     <div class="modal-card">
@@ -99,6 +177,7 @@
       <div id="modalContent"></div>
     </div>
   </div>
+
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/app.js"></script>

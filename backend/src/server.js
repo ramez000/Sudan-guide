@@ -46,6 +46,7 @@ function safeUser(user) {
   return {
     id: user.id,
     name: user.name,
+     bio: user.bio || "",
     email: user.email,
     role: user.role,
     trust: user.trust,
@@ -75,7 +76,7 @@ app.get("/api/meta", (req, res) => {
 });
 
 app.post("/api/auth/register", (req, res) => {
-  const { name, email, password } = req.body || {};
+  const { name, email, password, bio = "" } = req.body || {};
   if (!name || !email || !password) return res.status(400).json({ error: "الاسم والبريد وكلمة المرور مطلوبة." });
   if (String(password).length < 8) return res.status(400).json({ error: "كلمة المرور يجب أن تكون 8 أحرف على الأقل." });
 
@@ -88,6 +89,7 @@ app.post("/api/auth/register", (req, res) => {
   const user = {
     id: id("u"),
     name: String(name).trim().slice(0, 80),
+    bio: String(bio).trim().slice(0, 240),
     email: normalized,
     passwordHash: hashPassword(String(password)),
     role: "user",
@@ -116,6 +118,135 @@ app.get("/api/me", requireAuth, (req, res) => {
   if (!user) return res.status(401).json({ error: "الحساب غير موجود." });
   res.json({ user: safeUser(user) });
 });
+
+
+
+app.patch("/api/me", requireAuth, (req, res) => {
+  const { name, email, bio } = req.body || {};
+
+  if (
+    typeof name !== "string" ||
+    typeof email !== "string" ||
+    typeof bio !== "string"
+  ) {
+    return res.status(400).json({
+      error: "الاسم والبريد الإلكتروني والنبذة مطلوبة."
+    });
+  }
+
+  const cleanName = name.trim();
+  const cleanEmail = email.trim().toLowerCase();
+  const cleanBio = bio.trim();
+
+  if (cleanName.length < 2 || cleanName.length > 80) {
+    return res.status(400).json({
+      error: "الاسم يجب أن يكون بين حرفين و80 حرفًا."
+    });
+  }
+
+  if (
+    cleanEmail.length > 254 ||
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)
+  ) {
+    return res.status(400).json({
+      error: "يرجى إدخال بريد إلكتروني صحيح."
+    });
+  }
+
+  if (cleanBio.length > 240) {
+    return res.status(400).json({
+      error: "النبذة الشخصية يجب ألا تتجاوز 240 حرفًا."
+    });
+  }
+
+  const db = readDb();
+  const user = db.users.find(u => u.id === req.user.id);
+
+  if (!user) {
+    return res.status(404).json({
+      error: "الحساب غير موجود."
+    });
+  }
+
+  const emailExists = db.users.some(
+    u => u.id !== user.id &&
+      u.email.toLowerCase() === cleanEmail
+  );
+
+  if (emailExists) {
+    return res.status(409).json({
+      error: "هذا البريد الإلكتروني مستخدم في حساب آخر."
+    });
+  }
+
+  user.name = cleanName;
+  user.email = cleanEmail;
+  user.bio = cleanBio;
+
+  writeDb(db);
+
+  res.json({
+    message: "تم تحديث بيانات الحساب بنجاح.",
+    user: safeUser(user)
+  });
+});
+
+
+app.patch("/api/me/password", requireAuth, (req, res) => {
+  const { currentPassword, newPassword } = req.body || {};
+
+  if (
+    typeof currentPassword !== "string" ||
+    typeof newPassword !== "string" ||
+    !currentPassword ||
+    !newPassword
+  ) {
+    return res.status(400).json({
+      error: "أدخل كلمة المرور الحالية والجديدة."
+    });
+  }
+
+  if (newPassword.length < 8) {
+    return res.status(400).json({
+      error: "كلمة المرور الجديدة يجب أن تكون 8 أحرف على الأقل."
+    });
+  }
+
+  if (newPassword.length > 128) {
+    return res.status(400).json({
+      error: "كلمة المرور الجديدة طويلة جدًا."
+    });
+  }
+
+  if (currentPassword === newPassword) {
+    return res.status(400).json({
+      error: "كلمة المرور الجديدة يجب أن تختلف عن الحالية."
+    });
+  }
+
+  const db = readDb();
+  const user = db.users.find(u => u.id === req.user.id);
+
+  if (!user) {
+    return res.status(404).json({
+      error: "الحساب غير موجود."
+    });
+  }
+
+  if (!verifyPassword(currentPassword, user.passwordHash)) {
+    return res.status(401).json({
+      error: "كلمة المرور الحالية غير صحيحة."
+    });
+  }
+
+  user.passwordHash = hashPassword(newPassword);
+  writeDb(db);
+
+  return res.json({
+    message: "تم تغيير كلمة المرور بنجاح."
+  });
+});
+
 
 app.get("/api/places", (req, res) => {
   const db = readDb();
