@@ -98,14 +98,17 @@ To provide a reliable, user-friendly, and comprehensive online guide that helps 
 ## 📞 Contact Us
 <p align="center">
   <a href="mailto:sudanguide0@gmail.com">
-    <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Email" width="50">
+    <img src="https://cdn.simpleicons.org/gmail/EA4335" width="45" alt="Gmail"><br>
+    <strong>Email</strong>
   </a>
-  &nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="tel:+249115962269">
-    <img src="https://cdn.simpleicons.org/phone/0A66C2" alt="Phone" width="50">
+    <img src="https://img.icons8.com/fluency/96/phone.png" width="45" alt="Phone"><br>
+    <strong>Call Us</strong>
   </a>
-  &nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://wa.me/249115962269">
-    <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" width="50">
+    <img src="https://cdn.simpleicons.org/whatsapp/25D366" width="45" alt="WhatsApp"><br>
+    <strong>WhatsApp</strong>
   </a>
 </p>
