@@ -100,7 +100,6 @@ To provide a reliable, user-friendly, and comprehensive online guide that helps 
  <a
 href="https://wa.me/249115962269">
   <img
-  src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp"
-  width="50">
+  src="https://img.shields.io/badge/WhatsApp-25D336?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
  </a>
 </p>
