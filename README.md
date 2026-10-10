@@ -97,9 +97,15 @@ To provide a reliable, user-friendly, and comprehensive online guide that helps 
 
 ## 📞 Contact Us
 <p align="center">
- <a
-href="https://wa.me/249115962269">
-  <img
-  src="https://img.shields.io/badge/WhatsApp-25D336?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
- </a>
+  <a href="mailto:sudanguide0@gmail.com">
+    <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Email" width="50">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="tel:+249115962269">
+    <img src="https://cdn.simpleicons.org/phone/0A66C2" alt="Phone" width="50">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://wa.me/249115962269">
+    <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" width="50">
+  </a>
 </p>
